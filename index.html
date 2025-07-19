@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dosthulu - Friends Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Dosthulu - Friends Map</h1>
+  <p>Click on the map to add a friend marker. Hover/click marker to see notes.</p>
+  <div id="map"></div>
+
+  <div id="friend-form" class="hidden">
+    <h2>Add Friend Details</h2>
+    <form id="form">
+      <label>Name:<br /><input type="text" id="friend-name" required /></label><br /><br />
+      <label>Notes / Reminders:<br /><textarea id="friend-notes" rows="3"></textarea></label><br /><br />
+      <label>Usefulness (1–5):<br /><input type="number" id="friend-usefulness" min="1" max="5" value="3" /></label><br /><br />
+      <label>Upload Photo:<br /><input type="file" id="friend-photo" accept="image/*" /></label><br /><br />
+      <button type="submit">Add Friend</button>
+      <button type="button" id="cancel-btn">Cancel</button>
+    </form>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
